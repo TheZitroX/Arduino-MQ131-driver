@@ -28,8 +28,7 @@
  * SOFTWARE.
  *******************************************************************************/
 
-#ifndef _MQ131_H_
-#define _MQ131_H_
+#pragma once
 
 #include <Arduino.h>
 
@@ -133,5 +132,3 @@ class MQ131Class {
 };
 
 extern MQ131Class MQ131;
-
-#endif // _MQ131_H_
