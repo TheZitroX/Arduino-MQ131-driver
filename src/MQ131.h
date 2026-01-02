@@ -28,20 +28,21 @@
  * SOFTWARE.
  *******************************************************************************/
 
-#pragma once
+#ifndef _MQ131_H_
+#define _MQ131_H_
 
 #include <Arduino.h>
 
 // Default values
-constexpr int MQ131_DEFAULT_RL                            1000000           // Default load resistance of 1MOhms
-constexpr int MQ131_DEFAULT_STABLE_CYCLE                  15                // Number of cycles with low deviation to consider
-                                                                            // the calibration as stable and reliable
-constexpr int MQ131_DEFAULT_TEMPERATURE_CELSIUS           20                // Default temperature to correct environmental drift
-constexpr int MQ131_DEFAULT_HUMIDITY_PERCENT              65                // Default humidity to correct environmental drift
-constexpr float MQ131_DEFAULT_LO_CONCENTRATION_R0         1917.22           // Default R0 for low concentration MQ131
-constexpr int MQ131_DEFAULT_LO_CONCENTRATION_TIME2READ    80                // Default time to read before stable signal for low concentration MQ131
-constexpr float MQ131_DEFAULT_HI_CONCENTRATION_R0         235.00            // Default R0 for high concentration MQ131
-constexpr int MQ131_DEFAULT_HI_CONCENTRATION_TIME2READ    80                // Default time to read before stable signal for high concentration MQ131
+constexpr uint32_t MQ131_DEFAULT_RL = 1000000;           			// Default load resistance of 1MOhms
+constexpr uint8_t MQ131_DEFAULT_STABLE_CYCLE = 15;              	// Number of cycles with low deviation to consider
+																	// the calibration as stable and reliable
+constexpr int8_t MQ131_DEFAULT_TEMPERATURE_CELSIUS = 20;			// Default temperature to correct environmental drift
+constexpr uint8_t MQ131_DEFAULT_HUMIDITY_PERCENT = 65;				// Default humidity to correct environmental drift
+constexpr float MQ131_DEFAULT_LO_CONCENTRATION_R0 = 1917.22;		// Default R0 for low concentration MQ131
+constexpr uint32_t MQ131_DEFAULT_LO_CONCENTRATION_TIME2READ = 80;	// Default time to read before stable signal for low concentration MQ131
+constexpr float MQ131_DEFAULT_HI_CONCENTRATION_R0 = 235.00;			// Default R0 for high concentration MQ131
+constexpr uint32_t MQ131_DEFAULT_HI_CONCENTRATION_TIME2READ = 80;	// Default time to read before stable signal for high concentration MQ131
 
 enum MQ131Model {LOW_CONCENTRATION, HIGH_CONCENTRATION,SN_O2_LOW_CONCENTRATION};
 enum MQ131Unit {PPM, PPB, MG_M3, UG_M3};
